@@ -117,4 +117,30 @@ final class NetworkManager: NetworkCapable {
             }
         }
     }
+    
+    func getPhotos (from albumId: Int, completed: @escaping (Result<[Photo], NetworkError>) -> Void) {
+        
+        let endpoint = URLSection.domain + URLSection.photos + "\(albumId)"
+        
+        AF.request(endpoint).validate().responseJSON { response in
+            guard response.error == nil else {
+                completed(.failure(.invalidResponse))
+                return
+            }
+            
+            do {
+                if let data = response.data {
+                    let photos = try JSONDecoder().decode([Photo].self, from: data)
+                    completed(.success(photos))
+                } else {
+                    completed(.failure(.invalidData))
+                    return
+                }
+            } catch {
+                print("Error during JSON serialization: \(error.localizedDescription)")
+                completed(.failure(.failedToDecodeResponse))
+                
+            }
+        }
+    }
 }
