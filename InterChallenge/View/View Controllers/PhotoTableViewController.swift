@@ -28,44 +28,6 @@ class PhotoTableViewController: UITableViewController {
         
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return photos.count
-    }
-
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as? PhotoTableViewCell else {
-            return UITableViewCell()
-        }
-
-        let photo = photos[indexPath.row]
-        cell.titleLabel.text = photo.title
-
-        AF.download(photo.thumbnailUrl).responseData { response in
-            switch response.result {
-            case .success(let data):
-                cell.photoImageView.image = UIImage(data: data)
-            default:
-                break
-            }
-        }
-        
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let photo = photos[indexPath.row]
-        AF.download(photo.url).responseData { response in
-            switch response.result {
-            case .success(let data):
-                self.performSegue(withIdentifier: "photoToDetail",
-                                  sender: (photo: UIImage(data: data), name: photo.title))
-            default:
-                break
-            }
-        }
-    }
-
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
