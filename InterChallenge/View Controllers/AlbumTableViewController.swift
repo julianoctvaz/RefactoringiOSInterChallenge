@@ -9,32 +9,22 @@ class AlbumTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Álbuns de \(userName)"
-        tableView.register(UINib(nibName: "AlbumTableViewCell", bundle: nil), forCellReuseIdentifier: "AlbumCell")
-        fillAlbums(from: userId)
+        self.navigationItem.title = "Álbuns de \(userName)"
+        self.tableView.register(UINib(nibName: "AlbumTableViewCell", bundle: nil), forCellReuseIdentifier: "AlbumCell")
+        self.getAlbums(from: userId)
     }
     
-    private func fillAlbums(from userId: Int) {
-        AF.request("https://jsonplaceholder.typicode.com/albums?userId=\(userId)").validate().responseJSON { response in
-            guard response.error == nil else {
-                let alert = UIAlertController(title: "Erro", message: "Algo errado aconteceu. Tente novamente mais tarde.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
-                    alert.dismiss(animated: true)
-                }))
-                self.present(alert, animated: true)
-                return
+    private func getAlbums(from userId: Int) {
+        NetworkManager.shared.getAlbums(from: userId, completed: { [weak self] response in
+            switch response {
+            case .success(let result):
+                self!.albums = result
+                self!.tableView?.reloadData()
+            case .failure(let error):
+                print("Error during JSON serialization: \(error.localizedDescription). \(error.rawValue)")
+                self!.willDisplayAnErrorHandlerMessage()
             }
-            
-            do {
-                if let data = response.data {
-                    let models = try JSONDecoder().decode([Album].self, from: data)
-                    self.albums = models
-                    self.tableView.reloadData()
-                }
-            } catch {
-                print("Error during JSON serialization: \(error.localizedDescription)")
-            }
-        }
+        })
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -12,6 +12,7 @@ enum URLSection {
     static let users = "users"
     static let posts = "posts?userId="
     static let comments = "comments?postId="
+    static let albums = "albums?userId="
     
 
 }
