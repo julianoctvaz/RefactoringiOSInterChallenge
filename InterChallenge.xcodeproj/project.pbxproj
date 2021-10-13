@@ -11,13 +11,17 @@
 		171596622717324C00695CDC /* ChallengeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171596612717324C00695CDC /* ChallengeViewDelegate.swift */; };
 		171596642717354800695CDC /* PostTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171596632717354800695CDC /* PostTableViewDataSource.swift */; };
 		171596662717358B00695CDC /* PostTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171596652717358B00695CDC /* PostTableViewDelegate.swift */; };
+		17159669271738C400695CDC /* CommentTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17159668271738C400695CDC /* CommentTableViewDataSource.swift */; };
+		171596722717396700695CDC /* AlbumTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171596712717396700695CDC /* AlbumTableViewDataSource.swift */; };
+		171596742717399400695CDC /* AlbumTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171596732717399400695CDC /* AlbumTableViewDelegate.swift */; };
+		1715967627174E4700695CDC /* PhotoTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715967527174E4700695CDC /* PhotoTableViewDataSource.swift */; };
+		1715967827174EA300695CDC /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715967727174EA300695CDC /* PhotoTableViewController.swift */; };
 		178898E727164E92009B404D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178898E627164E92009B404D /* NetworkManager.swift */; };
 		178898EB27168331009B404D /* NetworkCapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178898EA27168331009B404D /* NetworkCapable.swift */; };
 		178898EF27168E15009B404D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178898EE27168E15009B404D /* NetworkError.swift */; };
 		178898F327169A6C009B404D /* ErrorHandlerMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178898F227169A6C009B404D /* ErrorHandlerMessage.swift */; };
 		178898F82716A3A6009B404D /* URLSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178898F72716A3A6009B404D /* URLSection.swift */; };
 		178898FB2716A8A3009B404D /* ChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178898FA2716A8A3009B404D /* ChallengeViewModel.swift */; };
-		178899032716B653009B404D /* ChallengeViewExtesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178899022716B653009B404D /* ChallengeViewExtesion.swift */; };
 		178899112716C21E009B404D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178899102716C21E009B404D /* Coordinator.swift */; };
 		178899132716F2CE009B404D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178899122716F2CE009B404D /* MainCoordinator.swift */; };
 		BA0CF8B126321D30007BDFC8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0CF89A26321BAE007BDFC8 /* Alamofire.framework */; };
@@ -135,13 +139,17 @@
 		171596612717324C00695CDC /* ChallengeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewDelegate.swift; sourceTree = "<group>"; };
 		171596632717354800695CDC /* PostTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewDataSource.swift; sourceTree = "<group>"; };
 		171596652717358B00695CDC /* PostTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewDelegate.swift; sourceTree = "<group>"; };
+		17159668271738C400695CDC /* CommentTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewDataSource.swift; sourceTree = "<group>"; };
+		171596712717396700695CDC /* AlbumTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewDataSource.swift; sourceTree = "<group>"; };
+		171596732717399400695CDC /* AlbumTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewDelegate.swift; sourceTree = "<group>"; };
+		1715967527174E4700695CDC /* PhotoTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewDataSource.swift; sourceTree = "<group>"; };
+		1715967727174EA300695CDC /* PhotoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewController.swift; sourceTree = "<group>"; };
 		178898E627164E92009B404D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		178898EA27168331009B404D /* NetworkCapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCapable.swift; sourceTree = "<group>"; };
 		178898EE27168E15009B404D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		178898F227169A6C009B404D /* ErrorHandlerMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerMessage.swift; sourceTree = "<group>"; };
 		178898F72716A3A6009B404D /* URLSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSection.swift; sourceTree = "<group>"; };
 		178898FA2716A8A3009B404D /* ChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewModel.swift; sourceTree = "<group>"; };
-		178899022716B653009B404D /* ChallengeViewExtesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewExtesion.swift; sourceTree = "<group>"; };
 		178899102716C21E009B404D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		178899122716F2CE009B404D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		BA0CF88F26321BAE007BDFC8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
@@ -208,6 +216,7 @@
 		1715965927172ED300695CDC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BA0CF8B62632F552007BDFC8 /* Cells */,
 				1715965E27172F5E00695CDC /* Extensions */,
 				BA0CF8C626334817007BDFC8 /* View Controllers */,
 			);
@@ -219,6 +228,9 @@
 			children = (
 				1715965F27172F9F00695CDC /* ChallengeViewDataSource.swift */,
 				171596632717354800695CDC /* PostTableViewDataSource.swift */,
+				17159668271738C400695CDC /* CommentTableViewDataSource.swift */,
+				171596712717396700695CDC /* AlbumTableViewDataSource.swift */,
+				1715967527174E4700695CDC /* PhotoTableViewDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -228,6 +240,8 @@
 			children = (
 				171596612717324C00695CDC /* ChallengeViewDelegate.swift */,
 				171596652717358B00695CDC /* PostTableViewDelegate.swift */,
+				171596732717399400695CDC /* AlbumTableViewDelegate.swift */,
+				1715967727174EA300695CDC /* PhotoTableViewController.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -235,6 +249,7 @@
 		1715965E27172F5E00695CDC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				178898F227169A6C009B404D /* ErrorHandlerMessage.swift */,
 				1715965B27172F2200695CDC /* DataSources */,
 				1715965C27172F2B00695CDC /* Delegates */,
 			);
@@ -255,15 +270,6 @@
 				178898EA27168331009B404D /* NetworkCapable.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		178898F427169A9E009B404D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				178898F227169A6C009B404D /* ErrorHandlerMessage.swift */,
-				178899022716B653009B404D /* ChallengeViewExtesion.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		178898F92716A835009B404D /* ViewModels */ = {
@@ -405,12 +411,10 @@
 			children = (
 				1788990B2716BEA2009B404D /* Coordinators */,
 				178898F92716A835009B404D /* ViewModels */,
-				178898F427169A9E009B404D /* Extensions */,
 				178898E927168313009B404D /* Protocols */,
 				BA0CF8BF2632F7CD007BDFC8 /* Models */,
 				1715965927172ED300695CDC /* View */,
 				178898DE27164E69009B404D /* Services */,
-				BA0CF8B62632F552007BDFC8 /* Cells */,
 				BA93F7EB2632035800CE8AFF /* AppDelegate.swift */,
 				BA93F7ED2632035800CE8AFF /* SceneDelegate.swift */,
 				BA93F7F12632035800CE8AFF /* Main.storyboard */,
@@ -633,11 +637,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				178898E727164E92009B404D /* NetworkManager.swift in Sources */,
+				171596742717399400695CDC /* AlbumTableViewDelegate.swift in Sources */,
 				178899132716F2CE009B404D /* MainCoordinator.swift in Sources */,
 				171596662717358B00695CDC /* PostTableViewDelegate.swift in Sources */,
 				178898FB2716A8A3009B404D /* ChallengeViewModel.swift in Sources */,
 				BA0CF8FE26337023007BDFC8 /* Photo.swift in Sources */,
-				178899032716B653009B404D /* ChallengeViewExtesion.swift in Sources */,
 				BA0CF8F526336DB5007BDFC8 /* PhotoTableViewCell.swift in Sources */,
 				BA0CF8EF26336B59007BDFC8 /* Album.swift in Sources */,
 				BA0CF8C12632F7E3007BDFC8 /* User.swift in Sources */,
@@ -652,12 +656,16 @@
 				178898F82716A3A6009B404D /* URLSection.swift in Sources */,
 				BA0CF8FA26336FEB007BDFC8 /* PhotoTableViewController.swift in Sources */,
 				BA0CF9022633764E007BDFC8 /* DetailsViewController.swift in Sources */,
+				1715967627174E4700695CDC /* PhotoTableViewDataSource.swift in Sources */,
+				1715967827174EA300695CDC /* PhotoTableViewController.swift in Sources */,
 				BA93F7F02632035800CE8AFF /* ChallengeViewController.swift in Sources */,
 				BA93F7EC2632035800CE8AFF /* AppDelegate.swift in Sources */,
 				178898EB27168331009B404D /* NetworkCapable.swift in Sources */,
 				BA0CF8DE263358E5007BDFC8 /* Comment.swift in Sources */,
+				171596722717396700695CDC /* AlbumTableViewDataSource.swift in Sources */,
 				171596622717324C00695CDC /* ChallengeViewDelegate.swift in Sources */,
 				171596642717354800695CDC /* PostTableViewDataSource.swift in Sources */,
+				17159669271738C400695CDC /* CommentTableViewDataSource.swift in Sources */,
 				BA93F7EE2632035800CE8AFF /* SceneDelegate.swift in Sources */,
 				BA0CF8DA26335759007BDFC8 /* Post.swift in Sources */,
 				BA0CF8D226334FDB007BDFC8 /* PostTableViewController.swift in Sources */,
