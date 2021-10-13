@@ -11,4 +11,5 @@ import Foundation
 protocol NetworkCapable {
     func getUsers(completed: @escaping (Result<[User], NetworkError>) -> Void)
     func getPosts (from userId: Int, completed: @escaping (Result<[Post], NetworkError>) -> Void)
+    func getComments (from postId: Int, completed: @escaping (Result<[Comment], NetworkError>) -> Void)
 }

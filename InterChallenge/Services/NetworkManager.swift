@@ -65,4 +65,30 @@ final class NetworkManager: NetworkCapable {
             }
         }
     }
+    
+    func getComments (from postId: Int, completed: @escaping (Result<[Comment], NetworkError>) -> Void) {
+        
+        let endpoint = URLSection.domain + URLSection.comments + "\(postId)"
+        
+        AF.request(endpoint).validate().responseJSON { response in
+            guard response.error == nil else {
+                completed(.failure(.invalidResponse))
+                return
+            }
+            
+            do {
+                if let data = response.data {
+                    let comments = try JSONDecoder().decode([Comment].self, from: data)
+                    completed(.success(comments))
+                } else {
+                    completed(.failure(.invalidData))
+                    return
+                }
+            } catch {
+                print("Error during JSON serialization: \(error.localizedDescription)")
+                completed(.failure(.failedToDecodeResponse))
+                
+            }
+        }
+    }
 }
