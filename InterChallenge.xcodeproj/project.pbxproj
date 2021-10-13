@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1715966027172F9F00695CDC /* ChallengeViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715965F27172F9F00695CDC /* ChallengeViewDataSource.swift */; };
 		171596622717324C00695CDC /* ChallengeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171596612717324C00695CDC /* ChallengeViewDelegate.swift */; };
+		171596642717354800695CDC /* PostTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171596632717354800695CDC /* PostTableViewDataSource.swift */; };
+		171596662717358B00695CDC /* PostTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171596652717358B00695CDC /* PostTableViewDelegate.swift */; };
 		178898E727164E92009B404D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178898E627164E92009B404D /* NetworkManager.swift */; };
 		178898EB27168331009B404D /* NetworkCapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178898EA27168331009B404D /* NetworkCapable.swift */; };
 		178898EF27168E15009B404D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178898EE27168E15009B404D /* NetworkError.swift */; };
@@ -131,6 +133,8 @@
 /* Begin PBXFileReference section */
 		1715965F27172F9F00695CDC /* ChallengeViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewDataSource.swift; sourceTree = "<group>"; };
 		171596612717324C00695CDC /* ChallengeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewDelegate.swift; sourceTree = "<group>"; };
+		171596632717354800695CDC /* PostTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewDataSource.swift; sourceTree = "<group>"; };
+		171596652717358B00695CDC /* PostTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewDelegate.swift; sourceTree = "<group>"; };
 		178898E627164E92009B404D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		178898EA27168331009B404D /* NetworkCapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCapable.swift; sourceTree = "<group>"; };
 		178898EE27168E15009B404D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				1715965F27172F9F00695CDC /* ChallengeViewDataSource.swift */,
+				171596632717354800695CDC /* PostTableViewDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				171596612717324C00695CDC /* ChallengeViewDelegate.swift */,
+				171596652717358B00695CDC /* PostTableViewDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -628,6 +634,7 @@
 			files = (
 				178898E727164E92009B404D /* NetworkManager.swift in Sources */,
 				178899132716F2CE009B404D /* MainCoordinator.swift in Sources */,
+				171596662717358B00695CDC /* PostTableViewDelegate.swift in Sources */,
 				178898FB2716A8A3009B404D /* ChallengeViewModel.swift in Sources */,
 				BA0CF8FE26337023007BDFC8 /* Photo.swift in Sources */,
 				178899032716B653009B404D /* ChallengeViewExtesion.swift in Sources */,
@@ -650,6 +657,7 @@
 				178898EB27168331009B404D /* NetworkCapable.swift in Sources */,
 				BA0CF8DE263358E5007BDFC8 /* Comment.swift in Sources */,
 				171596622717324C00695CDC /* ChallengeViewDelegate.swift in Sources */,
+				171596642717354800695CDC /* PostTableViewDataSource.swift in Sources */,
 				BA93F7EE2632035800CE8AFF /* SceneDelegate.swift in Sources */,
 				BA0CF8DA26335759007BDFC8 /* Post.swift in Sources */,
 				BA0CF8D226334FDB007BDFC8 /* PostTableViewController.swift in Sources */,
