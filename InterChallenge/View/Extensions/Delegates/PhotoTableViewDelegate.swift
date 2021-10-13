@@ -1,5 +1,5 @@
 //
-//  PhotoTableViewController.swift
+//  PhotoTableViewDelegate.swift
 //  InterChallenge
 //
 //  Created by Juliano Vaz on 13/10/21.

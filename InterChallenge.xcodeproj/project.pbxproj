@@ -15,7 +15,7 @@
 		171596722717396700695CDC /* AlbumTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171596712717396700695CDC /* AlbumTableViewDataSource.swift */; };
 		171596742717399400695CDC /* AlbumTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171596732717399400695CDC /* AlbumTableViewDelegate.swift */; };
 		1715967627174E4700695CDC /* PhotoTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715967527174E4700695CDC /* PhotoTableViewDataSource.swift */; };
-		1715967827174EA300695CDC /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715967727174EA300695CDC /* PhotoTableViewController.swift */; };
+		1715967827174EA300695CDC /* PhotoTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715967727174EA300695CDC /* PhotoTableViewDelegate.swift */; };
 		178898E727164E92009B404D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178898E627164E92009B404D /* NetworkManager.swift */; };
 		178898EB27168331009B404D /* NetworkCapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178898EA27168331009B404D /* NetworkCapable.swift */; };
 		178898EF27168E15009B404D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178898EE27168E15009B404D /* NetworkError.swift */; };
@@ -143,7 +143,7 @@
 		171596712717396700695CDC /* AlbumTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewDataSource.swift; sourceTree = "<group>"; };
 		171596732717399400695CDC /* AlbumTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewDelegate.swift; sourceTree = "<group>"; };
 		1715967527174E4700695CDC /* PhotoTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewDataSource.swift; sourceTree = "<group>"; };
-		1715967727174EA300695CDC /* PhotoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewController.swift; sourceTree = "<group>"; };
+		1715967727174EA300695CDC /* PhotoTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewDelegate.swift; sourceTree = "<group>"; };
 		178898E627164E92009B404D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		178898EA27168331009B404D /* NetworkCapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCapable.swift; sourceTree = "<group>"; };
 		178898EE27168E15009B404D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 				171596612717324C00695CDC /* ChallengeViewDelegate.swift */,
 				171596652717358B00695CDC /* PostTableViewDelegate.swift */,
 				171596732717399400695CDC /* AlbumTableViewDelegate.swift */,
-				1715967727174EA300695CDC /* PhotoTableViewController.swift */,
+				1715967727174EA300695CDC /* PhotoTableViewDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -657,7 +657,7 @@
 				BA0CF8FA26336FEB007BDFC8 /* PhotoTableViewController.swift in Sources */,
 				BA0CF9022633764E007BDFC8 /* DetailsViewController.swift in Sources */,
 				1715967627174E4700695CDC /* PhotoTableViewDataSource.swift in Sources */,
-				1715967827174EA300695CDC /* PhotoTableViewController.swift in Sources */,
+				1715967827174EA300695CDC /* PhotoTableViewDelegate.swift in Sources */,
 				BA93F7F02632035800CE8AFF /* ChallengeViewController.swift in Sources */,
 				BA93F7EC2632035800CE8AFF /* AppDelegate.swift in Sources */,
 				178898EB27168331009B404D /* NetworkCapable.swift in Sources */,
