@@ -27,27 +27,6 @@ class AlbumTableViewController: UITableViewController {
         })
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return albums.count
-    }
-
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath) as? AlbumTableViewCell else {
-            return UITableViewCell()
-        }
-
-        let album = albums[indexPath.row]
-        cell.albumNameLabel.text = album.title
-
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let albumId = albums[indexPath.row].id
-        performSegue(withIdentifier: "albumToPhoto", sender: albumId)
-    }
-
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -59,3 +38,5 @@ class AlbumTableViewController: UITableViewController {
         }
     }
 }
+
+
