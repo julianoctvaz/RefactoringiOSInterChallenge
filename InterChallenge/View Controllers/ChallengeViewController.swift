@@ -1,42 +1,52 @@
 import Alamofire
 import UIKit
 
-class ChallengeViewController: UITableViewController {
-    
+final class ChallengeViewController: UITableViewController {
+ 
     var users = [User]()
+//    private weak var viewModel: ChallengeViewModel?
+//    private var mainCoordinator: MainCoordinator?
+
+//    init(viewModel: ChallengeViewModel) {
+//        self.viewModel = viewModel
+//        super.init(nibName: nil, bundle: nil)
+//        self.viewModel!.controllerDelegate = self
+//    }
     
+//     required init?(coder aDecoder: NSCoder) {
+//         super.init(nibName: nil, bundle: nil)
+//         self.mainCoordinator = self.viewModel?.coordinator
+//         self.viewModel? = ChallengeViewModel(coordinator: mainCoordinator!)
+//    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCell")
-        fillUsers()
-    }
-    
-    private func fillUsers() {
-        AF.request("https://jsonplaceholder.typicode.com/users").validate().responseJSON { response in
-            guard response.error == nil else {
-                let alert = UIAlertController(title: "Erro", message: "Algo errado aconteceu. Tente novamente mais tarde.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
-                    alert.dismiss(animated: true)
-                }))
-                self.present(alert, animated: true)
-                return
-            }
-            
-            do {
-                if let data = response.data {
-                    let models = try JSONDecoder().decode([User].self, from: data)
-                    self.users = models
-                    self.tableView.reloadData()
-                }
-            } catch {
-                print("Error during JSON serialization: \(error.localizedDescription)")
-            }
-        }
+//        viewModel?.controllerDelegate? = self
+//        viewModel?.controllerDelegate?.fetchUsers()
+        self.fetchUsersTemporary()
+
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
+    
+    private func fetchUsersTemporary() {
+        NetworkManager.shared.getUsers(completed: { [weak self] response in
+            switch response {
+                case .success(let result):
+                    self!.users = result
+                self!.tableView?.reloadData()
+                case .failure(let error):
+                    print("Error during JSON serialization: \(error.localizedDescription). \(error.rawValue)")
+                    self!.willDisplayAnErrorHandlerMessage()
+            }
+        })
+}
+
+
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserTableViewCell else {
@@ -84,4 +94,6 @@ extension ChallengeViewController: UserTableViewCellDelegate {
         let userIdAndName = (id: userId, name: name)
         performSegue(withIdentifier: "challengeToPost", sender: userIdAndName)
     }
+    
+    
 }
