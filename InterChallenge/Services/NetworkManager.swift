@@ -12,7 +12,7 @@ final class NetworkManager: NetworkCapable {
     
     static let shared = NetworkManager()
     
-    private init() {}
+    init() {}
         
     func getUsers (completed: @escaping (Result<[User], NetworkError>) -> Void) {
         
