@@ -39,4 +39,30 @@ final class NetworkManager: NetworkCapable {
             }
         }
     }
+    
+    func getPosts (from userId: Int, completed: @escaping (Result<[Post], NetworkError>) -> Void) {
+        
+        let endpoint = URLSection.domain + URLSection.posts + "\(userId)"
+        
+        AF.request(endpoint).validate().responseJSON { response in
+            guard response.error == nil else {
+                completed(.failure(.invalidResponse))
+                return
+            }
+            
+            do {
+                if let data = response.data {
+                    let posts = try JSONDecoder().decode([Post].self, from: data)
+                    completed(.success(posts))
+                } else {
+                    completed(.failure(.invalidData))
+                    return
+                }
+            } catch {
+                print("Error during JSON serialization: \(error.localizedDescription)")
+                completed(.failure(.failedToDecodeResponse))
+                
+            }
+        }
+    }
 }
