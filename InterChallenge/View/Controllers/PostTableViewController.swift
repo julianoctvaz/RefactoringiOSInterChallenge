@@ -10,7 +10,7 @@ class PostTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Postagens de \(userName)"
-        self.tableView.register(UINib(nibName: "TitleAndDescriptionTableViewCell", bundle: nil),
+        self.tableView.register(TitleAndDescriptionTableViewCell.self,
                            forCellReuseIdentifier: "TitleAndDescriptionCell")
         self.fetchPostsTemporary(from: userId)
     }
