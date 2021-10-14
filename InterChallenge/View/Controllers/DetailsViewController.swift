@@ -18,7 +18,7 @@ final class DetailsViewController: UIViewController, ViewCode {
     
     func setupView() {
         addSubViews()
-        setupAdditionalConfiguration()
+        setupUIConfiguration()
         setupContraints()
     }
     
@@ -43,7 +43,7 @@ final class DetailsViewController: UIViewController, ViewCode {
     }
     
     
-    func setupAdditionalConfiguration(){
+    func setupUIConfiguration(){
         
         detailImageView.image = self.photo
         detailImageView.contentMode = .scaleAspectFit
@@ -51,8 +51,12 @@ final class DetailsViewController: UIViewController, ViewCode {
         nameLabel.text = self.name
         nameLabel.font = UIFont(name: "System", size: 17.0)
         nameLabel.contentMode = .left
+        nameLabel.numberOfLines = 0
         
-        navigationItem.title = "Desafio"
+        navigationItem.title = NavigationTitles.challenge
+        let backButton = UIBarButtonItem()
+        backButton.title = NavigationTitles.photos
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
     
     func addSubViews(){
