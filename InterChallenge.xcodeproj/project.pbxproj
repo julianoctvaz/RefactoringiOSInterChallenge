@@ -220,9 +220,8 @@
 		1715965927172ED300695CDC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BA0CF8C626334817007BDFC8 /* Controllers */,
 				BA0CF8B62632F552007BDFC8 /* Cells */,
-				1715965E27172F5E00695CDC /* Extensions */,
-				BA0CF8C626334817007BDFC8 /* View Controllers */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -349,7 +348,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		BA0CF8C626334817007BDFC8 /* View Controllers */ = {
+		BA0CF8C626334817007BDFC8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				BA93F7EF2632035800CE8AFF /* ChallengeViewController.swift */,
@@ -359,7 +358,7 @@
 				BA0CF8F926336FEB007BDFC8 /* PhotoTableViewController.swift */,
 				BA0CF9012633764E007BDFC8 /* DetailsViewController.swift */,
 			);
-			path = "View Controllers";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		BA0CF8C926334B6D007BDFC8 /* User */ = {
@@ -426,6 +425,7 @@
 				1788990B2716BEA2009B404D /* Coordinators */,
 				178898F92716A835009B404D /* ViewModels */,
 				178898E927168313009B404D /* Protocols */,
+				1715965E27172F5E00695CDC /* Extensions */,
 				BA0CF8BF2632F7CD007BDFC8 /* Models */,
 				1715965927172ED300695CDC /* View */,
 				178898DE27164E69009B404D /* Services */,
