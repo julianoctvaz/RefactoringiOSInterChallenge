@@ -44,7 +44,7 @@ final class PhotoTableViewCell: UITableViewCell, ViewCode {
     func setupUIConfiguration(){
         
         titleLabel.contentMode = .left
-        titleLabel.font = UIFont(name: "System", size: 17.0)
+        titleLabel.font = UIFont.systemFont(ofSize: 17)
         titleLabel.numberOfLines = 0
         
         photoImageView.contentMode = .scaleAspectFit

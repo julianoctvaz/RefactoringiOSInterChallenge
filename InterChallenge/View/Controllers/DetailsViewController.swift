@@ -49,7 +49,7 @@ final class DetailsViewController: UIViewController, ViewCode {
         detailImageView.contentMode = .scaleAspectFit
         
         nameLabel.text = self.name
-        nameLabel.font = UIFont(name: "System", size: 17.0)
+        nameLabel.font = UIFont.systemFont(ofSize: 17)
         nameLabel.contentMode = .left
         nameLabel.numberOfLines = 0
         
