@@ -25,9 +25,8 @@ final class AlbumTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             
-            albumNameLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16),
+            albumNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             albumNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-            albumNameLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -16),
             albumNameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
             albumNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
         ])
@@ -36,10 +35,6 @@ final class AlbumTableViewCell: UITableViewCell {
     func setupUIConfiguration(){
         
         self.albumNameLabel.numberOfLines = 0 //verificar os self
-    
-//        let backButton = UIBarButtonItem()
-//        backButton.title = NavigationTitles.challenge
-//        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         
     }
     

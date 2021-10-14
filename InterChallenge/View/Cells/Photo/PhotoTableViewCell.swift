@@ -31,9 +31,8 @@ final class PhotoTableViewCell: UITableViewCell, ViewCode {
             
             stackPhotoView.heightAnchor.constraint(equalToConstant: 166), //150(photo) + 16(top+bottom)
             
-            stackPhotoView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 8),
+            stackPhotoView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
             stackPhotoView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            stackPhotoView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -16),
             stackPhotoView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
             stackPhotoView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
 
