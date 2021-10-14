@@ -10,7 +10,7 @@ class PhotoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Fotos de \(userName)"
-        self.tableView.register(UINib(nibName: "PhotoTableViewCell", bundle: nil), forCellReuseIdentifier: "PhotoCell")
+        self.tableView.register(PhotoTableViewCell.self, forCellReuseIdentifier: "PhotoCell")
         self.getPhotos(from: albumId)
     }
     
