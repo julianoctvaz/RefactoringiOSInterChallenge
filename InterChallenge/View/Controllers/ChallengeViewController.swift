@@ -21,7 +21,7 @@ class ChallengeViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCell")
+        tableView.register(UserTableViewCell.self, forCellReuseIdentifier: "UserCell")
 //        viewModel?.controllerDelegate? = self
 //        viewModel?.controllerDelegate?.fetchUsers()
         self.fetchUsersTemporary()

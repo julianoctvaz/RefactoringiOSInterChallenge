@@ -4,9 +4,7 @@ import Foundation
 final class TitleAndDescriptionTableViewCell: UITableViewCell {
     
     @TemplateView var descriptionLabel:UILabel
-    @TemplateView var titleLabel: UILabel
-    @TemplateView var stackPhotoView: UIStackView
-    
+    @TemplateView var titleLabel: UILabel    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -26,6 +24,7 @@ final class TitleAndDescriptionTableViewCell: UITableViewCell {
     func setupContraints(){
         
         NSLayoutConstraint.activate([
+            
             
             titleLabel.bottomAnchor.constraint(equalTo:  descriptionLabel.topAnchor, constant: -16),
             titleLabel.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor,  constant: 16),

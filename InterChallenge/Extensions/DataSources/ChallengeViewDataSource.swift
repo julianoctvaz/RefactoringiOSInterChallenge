@@ -21,11 +21,18 @@ extension ChallengeViewController {
         cell.id = user.id
         cell.initialsLabel.text = String(user.name.prefix(2))
         cell.nameLabel.text = user.name
-        cell.userNameLabel.text = user.username
+        cell.usernameLabel.text = user.username
         cell.emailLabel.text = user.email
         cell.phoneLabel.text = user.phone
         cell.delegate = self
         cell.contentView.backgroundColor = indexPath.row % 2 == 0 ? .white : UIColor(white: 0.667, alpha: 0.2)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.row >= 0 ? 220 : 0
+    }
+    
+
+
 }
