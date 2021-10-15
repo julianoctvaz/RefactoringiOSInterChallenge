@@ -17,7 +17,7 @@ extension ChallengeViewController {
             return UITableViewCell()
         }
         
-        let user = users[indexPath.row] //verificar
+        let user = users[indexPath.row]
         cell.selectionStyle = .none
         cell.id = user.id
         cell.initialsLabel.text = String(user.name.prefix(2))

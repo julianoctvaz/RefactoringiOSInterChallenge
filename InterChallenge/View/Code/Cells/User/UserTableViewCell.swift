@@ -10,14 +10,15 @@ class UserTableViewCell: UITableViewCell, ViewCode {
     
     @TemplateView var initialsLabel: UILabel
     @TemplateView var nameLabel: UILabel
+    
     @TemplateView var usernameLabel: UILabel
-    @TemplateView var phoneLabel: UILabel
     @TemplateView var emailLabel: UILabel
+    @TemplateView var phoneLabel: UILabel
     
     @TemplateView private var divider: UIView
     
     @TemplateView private var HStackalbumsPosts: UIStackView
-    @TemplateView private var VStackUserEmailPhoto: UIStackView
+    @TemplateView private var VStackUserEmailPhone: UIStackView
     @TemplateView private var VStackInitialsName: UIStackView
     @TemplateView private var HStackBindingHorizontalStacks: UIStackView
     
@@ -41,31 +42,29 @@ class UserTableViewCell: UITableViewCell, ViewCode {
         
         NSLayoutConstraint.activate([
 
-            HStackBindingHorizontalStacks.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            
+
+            divider.heightAnchor.constraint(equalToConstant: 157.5),
+            divider.widthAnchor.constraint(equalToConstant: 2),
+            divider.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            divider.trailingAnchor.constraint(equalTo: phoneLabel.leadingAnchor, constant: -16),
+            divider.bottomAnchor.constraint(equalTo: albumsButton.topAnchor, constant: -8),
+
             initialsLabel.widthAnchor.constraint(equalToConstant: 88),
             initialsLabel.heightAnchor.constraint(equalToConstant: 88),
-            initialsLabel.topAnchor.constraint(equalTo: HStackBindingHorizontalStacks.topAnchor, constant: 16),
             initialsLabel.trailingAnchor.constraint(equalTo: divider.leadingAnchor, constant: -32),
-            initialsLabel.bottomAnchor.constraint(equalTo: nameLabel.topAnchor, constant: -16),
             initialsLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            
+            initialsLabel.bottomAnchor.constraint(equalTo: nameLabel.topAnchor, constant: -16),
+            initialsLabel.topAnchor.constraint(equalTo: divider.topAnchor, constant: 8),
+
             nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 4),
             nameLabel.trailingAnchor.constraint(equalTo: divider.leadingAnchor, constant: -16),
 
-            HStackalbumsPosts.topAnchor.constraint(equalTo: HStackBindingHorizontalStacks.bottomAnchor),
-            HStackalbumsPosts.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32),
-            HStackalbumsPosts.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            HStackalbumsPosts.heightAnchor.constraint(equalToConstant: 48),
-            
-            divider.heightAnchor.constraint(equalToConstant: 157.5),
-            divider.widthAnchor.constraint(equalToConstant: 2),
-            divider.topAnchor.constraint(equalTo: HStackBindingHorizontalStacks.topAnchor, constant: -2),
-            divider.trailingAnchor.constraint(equalTo: VStackUserEmailPhoto.leadingAnchor, constant: -16),
-            divider.bottomAnchor.constraint(equalTo: HStackalbumsPosts.topAnchor, constant: -8),
+            albumsButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32),
 
-            VStackUserEmailPhoto.bottomAnchor.constraint(equalTo: HStackalbumsPosts.topAnchor, constant: -32),
-            VStackUserEmailPhoto.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 24),
+            postsButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+
+            phoneLabel.bottomAnchor.constraint(equalTo: albumsButton.topAnchor, constant: -32),
+    
 
         ])
     }
@@ -87,9 +86,9 @@ class UserTableViewCell: UITableViewCell, ViewCode {
         emailLabel.textAlignment = .left
         phoneLabel.textAlignment = .left
         
-        VStackUserEmailPhoto.distribution = .fillEqually
-        VStackUserEmailPhoto.axis = .vertical
-        VStackUserEmailPhoto.spacing = 24
+        VStackUserEmailPhone.distribution = .fillEqually
+        VStackUserEmailPhone.axis = .vertical
+        VStackUserEmailPhone.spacing = 24
         
         HStackBindingHorizontalStacks.distribution = .fillProportionally
         HStackBindingHorizontalStacks.axis = .horizontal
@@ -124,17 +123,17 @@ class UserTableViewCell: UITableViewCell, ViewCode {
        contentView.addSubview(usernameLabel)
        contentView.addSubview(emailLabel)
        contentView.addSubview(phoneLabel)
-       contentView.addSubview(VStackUserEmailPhoto)
+       contentView.addSubview(VStackUserEmailPhone)
         
-        VStackUserEmailPhoto.addArrangedSubview(usernameLabel)
-        VStackUserEmailPhoto.addArrangedSubview(emailLabel)
-        VStackUserEmailPhoto.addArrangedSubview(phoneLabel)
+        VStackUserEmailPhone.addArrangedSubview(usernameLabel)
+        VStackUserEmailPhone.addArrangedSubview(emailLabel)
+        VStackUserEmailPhone.addArrangedSubview(phoneLabel)
         
        contentView.addSubview(HStackBindingHorizontalStacks)
         
         HStackBindingHorizontalStacks.addArrangedSubview(VStackInitialsName)
         HStackBindingHorizontalStacks.addArrangedSubview(divider)
-        HStackBindingHorizontalStacks.addArrangedSubview(VStackUserEmailPhoto)
+        HStackBindingHorizontalStacks.addArrangedSubview(VStackUserEmailPhone)
         
        contentView.addSubview(albumsButton)
        contentView.addSubview(postsButton)

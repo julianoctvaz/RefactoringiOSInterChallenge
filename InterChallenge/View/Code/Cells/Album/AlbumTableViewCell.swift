@@ -34,7 +34,7 @@ final class AlbumTableViewCell: UITableViewCell {
     
     func setupUIConfiguration(){
         
-        self.albumNameLabel.numberOfLines = 0 //verificar os self
+        self.albumNameLabel.numberOfLines = 0
         
     }
     
@@ -42,7 +42,7 @@ final class AlbumTableViewCell: UITableViewCell {
         contentView.addSubview(albumNameLabel)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) { //verificar aqui e pohototableVC
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

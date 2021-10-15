@@ -12,7 +12,7 @@ extension PhotoTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let photo = photos[indexPath.row]
-        AF.download(photo.url).responseData { response in //verificar
+        AF.download(photo.url).responseData { response in 
             switch response.result {
                 case .success(let data):
                     self.performSegue(withIdentifier: "photoToDetail",

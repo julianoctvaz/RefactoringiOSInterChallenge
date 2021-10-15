@@ -23,7 +23,7 @@ extension PhotoTableViewController {
         cell.titleLabel.text = photo.title
         cell.completeSeparatorLine(cell)
         
-        AF.download(photo.thumbnailUrl).responseData { response in //verificar 
+        AF.download(photo.thumbnailUrl).responseData { response in  
             switch response.result {
             case .success(let data):
                 cell.photoImageView.image = UIImage(data: data)
