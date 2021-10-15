@@ -24,9 +24,6 @@
 		178898EF27168E15009B404D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178898EE27168E15009B404D /* NetworkError.swift */; };
 		178898F327169A6C009B404D /* ErrorHandlerMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178898F227169A6C009B404D /* ErrorHandlerMessage.swift */; };
 		178898F82716A3A6009B404D /* URLSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178898F72716A3A6009B404D /* URLSection.swift */; };
-		178898FB2716A8A3009B404D /* ChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178898FA2716A8A3009B404D /* ChallengeViewModel.swift */; };
-		178899112716C21E009B404D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178899102716C21E009B404D /* Coordinator.swift */; };
-		178899132716F2CE009B404D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178899122716F2CE009B404D /* MainCoordinator.swift */; };
 		BA0CF8B126321D30007BDFC8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0CF89A26321BAE007BDFC8 /* Alamofire.framework */; };
 		BA0CF8B226321D30007BDFC8 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA0CF89A26321BAE007BDFC8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BA0CF8B92632F566007BDFC8 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0CF8B72632F566007BDFC8 /* UserTableViewCell.swift */; };
@@ -151,9 +148,6 @@
 		178898EE27168E15009B404D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		178898F227169A6C009B404D /* ErrorHandlerMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerMessage.swift; sourceTree = "<group>"; };
 		178898F72716A3A6009B404D /* URLSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSection.swift; sourceTree = "<group>"; };
-		178898FA2716A8A3009B404D /* ChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewModel.swift; sourceTree = "<group>"; };
-		178899102716C21E009B404D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		178899122716F2CE009B404D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		BA0CF88F26321BAE007BDFC8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		BA0CF8B72632F566007BDFC8 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		BA0CF8C02632F7E3007BDFC8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -278,23 +272,6 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		178898F92716A835009B404D /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				178898FA2716A8A3009B404D /* ChallengeViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		1788990B2716BEA2009B404D /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				178899102716C21E009B404D /* Coordinator.swift */,
-				178899122716F2CE009B404D /* MainCoordinator.swift */,
-			);
-			path = Coordinators;
-			sourceTree = "<group>";
-		};
 		BA0CF86C26321AE6007BDFC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,8 +390,6 @@
 			isa = PBXGroup;
 			children = (
 				174154A827179E7900025937 /* Resources */,
-				1788990B2716BEA2009B404D /* Coordinators */,
-				178898F92716A835009B404D /* ViewModels */,
 				178898E927168313009B404D /* Protocols */,
 				1715965E27172F5E00695CDC /* Extensions */,
 				BA0CF8BF2632F7CD007BDFC8 /* Models */,
@@ -639,15 +614,12 @@
 			files = (
 				178898E727164E92009B404D /* NetworkManager.swift in Sources */,
 				171596742717399400695CDC /* AlbumTableViewDelegate.swift in Sources */,
-				178899132716F2CE009B404D /* MainCoordinator.swift in Sources */,
 				171596662717358B00695CDC /* PostTableViewDelegate.swift in Sources */,
-				178898FB2716A8A3009B404D /* ChallengeViewModel.swift in Sources */,
 				BA0CF8FE26337023007BDFC8 /* Photo.swift in Sources */,
 				BA0CF8F526336DB5007BDFC8 /* PhotoTableViewCell.swift in Sources */,
 				BA0CF8EF26336B59007BDFC8 /* Album.swift in Sources */,
 				BA0CF8C12632F7E3007BDFC8 /* User.swift in Sources */,
 				BA0CF8EB26336B40007BDFC8 /* AlbumTableViewController.swift in Sources */,
-				178899112716C21E009B404D /* Coordinator.swift in Sources */,
 				BA0CF8B92632F566007BDFC8 /* UserTableViewCell.swift in Sources */,
 				1715966027172F9F00695CDC /* ChallengeViewDataSource.swift in Sources */,
 				BA0CF8D626334FF0007BDFC8 /* CommentTableViewController.swift in Sources */,
