@@ -53,9 +53,9 @@ final class DetailsViewController: UIViewController, ViewCode {
         nameLabel.contentMode = .left
         nameLabel.numberOfLines = 0
         
-        navigationItem.title = NavigationTitles.challenge
+        navigationItem.title = ConstantsStrings.challengeButtonBackTitle
         let backButton = UIBarButtonItem()
-        backButton.title = NavigationTitles.photos
+        backButton.title = ConstantsStrings.photosButtonBackTitle
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
     
