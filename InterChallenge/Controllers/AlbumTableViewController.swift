@@ -14,6 +14,7 @@ class AlbumTableViewController: UITableViewController {
         self.getAlbums(from: userId)
     }
     
+    // MARK: - Network
     private func getAlbums(from userId: Int) {
         NetworkManager.shared.getAlbums(from: userId, completed: { [weak self] response in
             switch response {

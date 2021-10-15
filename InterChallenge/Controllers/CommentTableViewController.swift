@@ -15,6 +15,7 @@ class CommentTableViewController: UITableViewController {
         self.getComments(from: postId)
     }
     
+    // MARK: - Network
     private func getComments(from postId: Int) {
         NetworkManager.shared.getComments(from: postId, completed: { [weak self] response in
             switch response {

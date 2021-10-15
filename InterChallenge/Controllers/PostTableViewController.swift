@@ -15,6 +15,7 @@ class PostTableViewController: UITableViewController {
         self.fetchPostsTemporary(from: userId)
     }
     
+    // MARK: - Network
     private func fetchPostsTemporary(from userId: Int) {
         NetworkManager.shared.getPosts(from: userId, completed: { [weak self] response in
             switch response {

@@ -14,6 +14,7 @@ class PhotoTableViewController: UITableViewController {
         self.getPhotos(from: albumId)
     }
     
+    // MARK: - Network
     private func getPhotos(from albumId: Int) {
         NetworkManager.shared.getPhotos(from: albumId, completed: { [weak self] response in
             switch response {

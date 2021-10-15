@@ -4,31 +4,15 @@ import UIKit
 class ChallengeViewController: UITableViewController {
  
     var users = [User]()
-//    private weak var viewModel: ChallengeViewModel?
-//    private var mainCoordinator: MainCoordinator?
 
-//    init(viewModel: ChallengeViewModel) {
-//        self.viewModel = viewModel
-//        super.init(nibName: nil, bundle: nil)
-//        self.viewModel!.controllerDelegate = self
-//    }
-    
-//     required init?(coder aDecoder: NSCoder) {
-//         super.init(nibName: nil, bundle: nil)
-//         self.mainCoordinator = self.viewModel?.coordinator
-//         self.viewModel? = ChallengeViewModel(coordinator: mainCoordinator!)
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UserTableViewCell.self, forCellReuseIdentifier: "UserCell")
-//        viewModel?.controllerDelegate? = self
-//        viewModel?.controllerDelegate?.fetchUsers()
-        self.fetchUsersTemporary()
-
+        self.fetchUsers()
     }
     
-    private func fetchUsersTemporary() {
+    // MARK: - Network
+    private func fetchUsers() {
         NetworkManager.shared.getUsers(completed: { [weak self] response in
             switch response {
                 case .success(let result):
@@ -40,6 +24,7 @@ class ChallengeViewController: UITableViewController {
             }
         })
 }
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
