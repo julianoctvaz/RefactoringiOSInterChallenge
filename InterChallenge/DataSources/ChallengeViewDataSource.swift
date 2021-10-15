@@ -16,6 +16,7 @@ extension ChallengeViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserTableViewCell else {
             return UITableViewCell()
         }
+        
         let user = users[indexPath.row] //verificar
         cell.selectionStyle = .none
         cell.id = user.id
@@ -25,7 +26,10 @@ extension ChallengeViewController {
         cell.emailLabel.text = user.email
         cell.phoneLabel.text = user.phone
         cell.delegate = self
+        cell.completeSeparatorLine(cell)
         cell.contentView.backgroundColor = indexPath.row % 2 == 0 ? .white : UIColor(white: 0.667, alpha: 0.2)
+       
+        
         return cell
     }
     
@@ -33,6 +37,7 @@ extension ChallengeViewController {
         return indexPath.row >= 0 ? 220 : 0
     }
     
+
 
 
 }

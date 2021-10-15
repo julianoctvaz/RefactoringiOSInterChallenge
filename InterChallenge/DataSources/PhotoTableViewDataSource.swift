@@ -21,6 +21,7 @@ extension PhotoTableViewController {
         
         let photo = photos[indexPath.row]
         cell.titleLabel.text = photo.title
+        cell.completeSeparatorLine(cell)
         
         AF.download(photo.thumbnailUrl).responseData { response in //verificar 
             switch response.result {

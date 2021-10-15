@@ -21,6 +21,7 @@ extension PostTableViewController {
         let post = posts[indexPath.row]
         cell.titleLabel.text = post.title
         cell.descriptionLabel.text = post.body
+        cell.completeSeparatorLine(cell)
         
         return cell
     }

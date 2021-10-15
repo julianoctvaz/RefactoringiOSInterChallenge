@@ -21,6 +21,7 @@ extension CommentTableViewController {
         cell.selectionStyle = .none
         cell.titleLabel.text = comment.name
         cell.descriptionLabel.text = comment.body
+        cell.completeSeparatorLine(cell)
         
         return cell
     }

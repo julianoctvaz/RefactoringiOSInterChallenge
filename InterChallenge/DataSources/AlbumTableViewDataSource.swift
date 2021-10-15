@@ -20,6 +20,7 @@ extension AlbumTableViewController {
         
         let album = albums[indexPath.row]
         cell.albumNameLabel.text = album.title
+        cell.completeSeparatorLine(cell)
         
         return cell
     }
