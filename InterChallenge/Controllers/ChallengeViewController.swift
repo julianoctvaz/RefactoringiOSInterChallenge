@@ -1,7 +1,7 @@
 import Alamofire
 import UIKit
 
-class ChallengeViewController: UITableViewController {
+final class ChallengeViewController: UITableViewController {
  
     var users = [User]()
     weak var coordinator: CoordinatorManager?

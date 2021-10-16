@@ -1,7 +1,7 @@
 import Alamofire
 import UIKit
 
-class PhotoTableViewController: UITableViewController {
+final class PhotoTableViewController: UITableViewController {
 
     var albumId = Int()
     var userName = String()

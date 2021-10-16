@@ -1,7 +1,7 @@
 import Alamofire
 import UIKit
 
-class PostTableViewController: UITableViewController {
+final class PostTableViewController: UITableViewController {
     
     var userId = Int()
     var userName = String()
