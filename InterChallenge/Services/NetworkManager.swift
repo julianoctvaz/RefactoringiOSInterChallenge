@@ -144,8 +144,8 @@ final class NetworkManager: NetworkCapable {
         }
     }
     
-    func getPhotosThumbnail(_ photo: Photo, _ cell: PhotoTableViewCell) -> DownloadRequest {
-        return AF.download(photo.thumbnailUrl).responseData { response in
+    func getPhotosThumbnail(_ photo: Photo, _ cell: PhotoTableViewCell) -> Void {
+        AF.download(photo.thumbnailUrl).responseData { response in
             switch response.result {
             case .success(let data):
                 cell.photoImageView.image = UIImage(data: data)
