@@ -209,13 +209,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1715965927172ED300695CDC /* View */ = {
+		1715965927172ED300695CDC /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				BA93F7F62632035A00CE8AFF /* LaunchScreen.storyboard */,
 				BA0CF8B62632F552007BDFC8 /* Cells */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		1715965B27172F2200695CDC /* DataSources */ = {
@@ -404,7 +404,7 @@
 				178898E927168313009B404D /* Protocols */,
 				1715965E27172F5E00695CDC /* Extensions */,
 				BA0CF8BF2632F7CD007BDFC8 /* Models */,
-				1715965927172ED300695CDC /* View */,
+				1715965927172ED300695CDC /* Views */,
 				BA0CF8C626334817007BDFC8 /* Controllers */,
 				178898DE27164E69009B404D /* Services */,
 			);
