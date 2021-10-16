@@ -29,16 +29,5 @@ class PostTableViewController: UITableViewController {
             }
         })
     }
-    
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinatoinVC = segue.destination as? CommentTableViewController {
-            if let postId = sender as? Int {
-                destinatoinVC.userName = userName
-                destinatoinVC.postId = postId
-            }
-        }
-    }
 }
 
