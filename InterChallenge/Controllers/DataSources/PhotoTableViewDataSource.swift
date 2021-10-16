@@ -14,6 +14,8 @@ extension PhotoTableViewController {
     }
     
     
+
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as? PhotoTableViewCell else {
             return UITableViewCell()
@@ -22,15 +24,7 @@ extension PhotoTableViewController {
         let photo = photos[indexPath.row]
         cell.titleLabel.text = photo.title
         cell.completeSeparatorLine(cell)
-        
-        AF.download(photo.thumbnailUrl).responseData { response in  
-            switch response.result {
-            case .success(let data):
-                cell.photoImageView.image = UIImage(data: data)
-            default:
-                break
-            }
-        }
+        NetworkManager.shared.getPhotosThumbnail(photo, cell)
         
         return cell
     }
