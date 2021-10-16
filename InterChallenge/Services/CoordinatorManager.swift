@@ -19,9 +19,9 @@ final class CoordinatorManager: Coordinator {
     
     func start() {
         
-        let rootViewControoler = ChallengeViewController()
-        rootViewControoler.coordinator = self
-        navigationController.pushViewController(rootViewControoler, animated: false)
+        let rootViewController = ChallengeViewController()
+        rootViewController.coordinator = self
+        navigationController.pushViewController(rootViewController, animated: false)
     }
     
     func postsTable(with userId: Int, by name: String) {
