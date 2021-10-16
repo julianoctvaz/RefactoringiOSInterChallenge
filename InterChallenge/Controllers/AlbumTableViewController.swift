@@ -6,7 +6,7 @@ class AlbumTableViewController: UITableViewController {
     var userId = Int()
     var userName = String()
     var albums = [Album]()
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: CoordinatorManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,17 +27,6 @@ class AlbumTableViewController: UITableViewController {
                 self!.willDisplayAnErrorHandlerMessage()
             }
         })
-    }
-
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinatoinVC = segue.destination as? PhotoTableViewController {
-            if let albumId = sender as? Int {
-                destinatoinVC.userName = userName
-                destinatoinVC.albumId = albumId
-            }
-        }
     }
 }
 

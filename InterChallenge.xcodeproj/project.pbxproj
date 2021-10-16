@@ -16,7 +16,7 @@
 		171596742717399400695CDC /* AlbumTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171596732717399400695CDC /* AlbumTableViewDelegate.swift */; };
 		1715967627174E4700695CDC /* PhotoTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715967527174E4700695CDC /* PhotoTableViewDataSource.swift */; };
 		1715967827174EA300695CDC /* PhotoTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1715967727174EA300695CDC /* PhotoTableViewDelegate.swift */; };
-		1733ECCC271B3151001ECFED /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733ECCB271B3151001ECFED /* MainCoordinator.swift */; };
+		1733ECCC271B3151001ECFED /* CoordinatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733ECCB271B3151001ECFED /* CoordinatorManager.swift */; };
 		1733ECCE271B3193001ECFED /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733ECCD271B3193001ECFED /* Coordinator.swift */; };
 		17415422271797F900025937 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17415421271797F900025937 /* ViewCode.swift */; };
 		174154AA27179E9400025937 /* TemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174154A927179E9400025937 /* TemplateView.swift */; };
@@ -142,7 +142,7 @@
 		171596732717399400695CDC /* AlbumTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewDelegate.swift; sourceTree = "<group>"; };
 		1715967527174E4700695CDC /* PhotoTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewDataSource.swift; sourceTree = "<group>"; };
 		1715967727174EA300695CDC /* PhotoTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewDelegate.swift; sourceTree = "<group>"; };
-		1733ECCB271B3151001ECFED /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		1733ECCB271B3151001ECFED /* CoordinatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorManager.swift; sourceTree = "<group>"; };
 		1733ECCD271B3193001ECFED /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		17415421271797F900025937 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		174154A927179E9400025937 /* TemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateView.swift; sourceTree = "<group>"; };
@@ -260,14 +260,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		1733ECC3271B3138001ECFED /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				1733ECCB271B3151001ECFED /* MainCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
 		174154A827179E7900025937 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +272,7 @@
 		178898DE27164E69009B404D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1733ECCB271B3151001ECFED /* CoordinatorManager.swift */,
 				178898E627164E92009B404D /* NetworkManager.swift */,
 			);
 			path = Services;
@@ -412,7 +405,6 @@
 		BA93F7EA2632035800CE8AFF /* InterChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				1733ECC3271B3138001ECFED /* Coordinator */,
 				17005C3A271991A700ACFE1E /* AppDelegate */,
 				174154A827179E7900025937 /* Resources */,
 				178898E927168313009B404D /* Protocols */,
@@ -659,7 +651,7 @@
 				BA0CF8DE263358E5007BDFC8 /* Comment.swift in Sources */,
 				171596722717396700695CDC /* AlbumTableViewDataSource.swift in Sources */,
 				171596622717324C00695CDC /* ChallengeViewDelegate.swift in Sources */,
-				1733ECCC271B3151001ECFED /* MainCoordinator.swift in Sources */,
+				1733ECCC271B3151001ECFED /* CoordinatorManager.swift in Sources */,
 				171596642717354800695CDC /* PostTableViewDataSource.swift in Sources */,
 				17D285BA27199D8600F5CE96 /* UITableViewCell+SeparatorLine.swift in Sources */,
 				17159669271738C400695CDC /* CommentTableViewDataSource.swift in Sources */,
