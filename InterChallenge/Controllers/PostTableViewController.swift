@@ -12,11 +12,11 @@ class PostTableViewController: UITableViewController {
         navigationItem.title = "Postagens de \(userName)"
         self.tableView.register(TitleAndDescriptionTableViewCell.self,
                            forCellReuseIdentifier: "TitleAndDescriptionCell")
-        self.fetchPostsTemporary(from: userId)
+        self.fetchPosts(from: userId)
     }
     
     // MARK: - Network
-    private func fetchPostsTemporary(from userId: Int) {
+    private func fetchPosts(from userId: Int) {
         NetworkManager.shared.getPosts(from: userId, completed: { [weak self] response in
             switch response {
             case .success(let result):
