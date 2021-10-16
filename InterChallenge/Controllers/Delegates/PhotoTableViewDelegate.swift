@@ -15,8 +15,7 @@ extension PhotoTableViewController {
         AF.download(photo.url).responseData { response in 
             switch response.result {
                 case .success(let data):
-                    self.performSegue(withIdentifier: "photoToDetail",
-                                      sender: (photo: UIImage(data: data), name: photo.title))
+                self.coordinator?.photoToDetails(with: photo.title, by: UIImage(data: data)!)
                 default:
                     break
                 }

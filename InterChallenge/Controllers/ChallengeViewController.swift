@@ -8,6 +8,7 @@ class ChallengeViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Desafio"
         tableView.register(UserTableViewCell.self, forCellReuseIdentifier: "UserCell")
         self.fetchUsers()
     }
