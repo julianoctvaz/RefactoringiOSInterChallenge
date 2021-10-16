@@ -6,7 +6,8 @@ class AlbumTableViewController: UITableViewController {
     var userId = Int()
     var userName = String()
     var albums = [Album]()
-
+    weak var coordinator: MainCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Álbuns de \(userName)"

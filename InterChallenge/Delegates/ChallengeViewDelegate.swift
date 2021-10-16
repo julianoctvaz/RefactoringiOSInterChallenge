@@ -8,13 +8,11 @@
 extension ChallengeViewController: UserTableViewCellDelegate {
     
     func didTapAlbums(with userId: Int, by name: String) {
-        let userIdAndName = (id: userId, name: name)
-        performSegue(withIdentifier: "challengeToAlbum", sender: userIdAndName)
+        self.coordinator?.albumsTable(with: userId, by: name)
     }
     
     func didTapPosts(with userId: Int, by name: String) {
-        let userIdAndName = (id: userId, name: name)
-        performSegue(withIdentifier: "challengeToPost", sender: userIdAndName)
+        self.coordinator?.postsTable(with: userId, by: name)
     }
     
 }

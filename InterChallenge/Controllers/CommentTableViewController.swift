@@ -6,6 +6,7 @@ class CommentTableViewController: UITableViewController {
     var postId = Int()
     var userName = String()
     var comments = [Comment]()
+    weak var coordinator: MainCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()

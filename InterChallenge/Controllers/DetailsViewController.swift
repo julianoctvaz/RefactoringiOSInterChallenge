@@ -7,6 +7,7 @@ final class DetailsViewController: UIViewController, ViewCode {
     @TemplateView private var nameLabel: UILabel
     lazy var photo = UIImage()
     lazy var name = String()
+    weak var coordinator: MainCoordinator?
     
     
     override func viewDidLoad() {

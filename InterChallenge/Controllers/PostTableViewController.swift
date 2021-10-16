@@ -6,6 +6,7 @@ class PostTableViewController: UITableViewController {
     var userId = Int()
     var userName = String()
     var posts = [Post]()
+    weak var coordinator: MainCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()

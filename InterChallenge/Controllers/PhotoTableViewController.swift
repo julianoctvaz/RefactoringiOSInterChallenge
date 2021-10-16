@@ -6,6 +6,7 @@ class PhotoTableViewController: UITableViewController {
     var albumId = Int()
     var userName = String()
     var photos = [Photo]()
+    weak var coordinator: MainCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()

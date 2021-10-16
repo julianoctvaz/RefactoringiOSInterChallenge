@@ -4,6 +4,7 @@ import UIKit
 class ChallengeViewController: UITableViewController {
  
     var users = [User]()
+    weak var coordinator: MainCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
