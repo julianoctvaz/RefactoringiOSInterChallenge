@@ -18,7 +18,6 @@ final class PhotoTableViewCell: UITableViewCell, ViewCode {
         fatalError("init(coder:) has not been implemented")
     }
 
-
     func setupView(){
         addSubViews()
         setupUIConfiguration()

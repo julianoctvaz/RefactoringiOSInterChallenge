@@ -246,7 +246,6 @@
 			children = (
 				178898F227169A6C009B404D /* ErrorHandlerMessage.swift */,
 				17D285B927199D8600F5CE96 /* UITableViewCell+SeparatorLine.swift */,
-				1733ECCD271B3193001ECFED /* Coordinator.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +273,7 @@
 			children = (
 				178898EA27168331009B404D /* NetworkCapable.swift */,
 				17415421271797F900025937 /* ViewCode.swift */,
+				1733ECCD271B3193001ECFED /* Coordinator.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";

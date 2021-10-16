@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-class CoordinatorManager: Coordinator {
+final class CoordinatorManager: Coordinator {
+    
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     
@@ -17,12 +18,14 @@ class CoordinatorManager: Coordinator {
     }
     
     func start() {
+        
         let rootViewControoler = ChallengeViewController()
         rootViewControoler.coordinator = self
         navigationController.pushViewController(rootViewControoler, animated: false)
     }
     
     func postsTable(with userId: Int, by name: String) {
+        
         let vc = PostTableViewController()
         vc.coordinator = self
         vc.userId = userId
@@ -31,6 +34,7 @@ class CoordinatorManager: Coordinator {
     }
     
     func albumsTable(with userId: Int, by name: String) {
+        
         let vc = AlbumTableViewController()
         vc.coordinator = self
         vc.userId = userId
@@ -39,6 +43,7 @@ class CoordinatorManager: Coordinator {
     }
     
     func postsToComments(with postId: Int, by username: String) {
+        
         let vc = CommentTableViewController()
         vc.coordinator = self
         vc.postId = postId
@@ -47,6 +52,7 @@ class CoordinatorManager: Coordinator {
     }
     
     func albumToPhoto(with albumId: Int, by username: String) {
+        
         let vc = PhotoTableViewController()
         vc.coordinator = self
         vc.albumId = albumId
@@ -55,6 +61,7 @@ class CoordinatorManager: Coordinator {
     }
     
     func photoToDetails(with title: String, by image: UIImage){
+        
         let vc = DetailsViewController()
         vc.coordinator = self
         vc.name = title

@@ -8,6 +8,7 @@
 import Foundation
 
 protocol ViewCode {
+    
     func addSubViews()
     func setupContraints()
     func setupUIConfiguration()
@@ -15,7 +16,9 @@ protocol ViewCode {
 }
 
 extension ViewCode {
+    
     func setupView() {
+        
         addSubViews()
         setupContraints()
         setupUIConfiguration()

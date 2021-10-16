@@ -5,7 +5,7 @@ protocol UserTableViewCellDelegate: AnyObject {
     func didTapPosts(with userId: Int, by name: String)
 }
 
-class UserTableViewCell: UITableViewCell, ViewCode {
+final class UserTableViewCell: UITableViewCell, ViewCode {
  
     
     @TemplateView var initialsLabel: UILabel
@@ -29,6 +29,7 @@ class UserTableViewCell: UITableViewCell, ViewCode {
     var id: Int = 0
     var delegate: UserTableViewCellDelegate?
     
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
@@ -38,10 +39,10 @@ class UserTableViewCell: UITableViewCell, ViewCode {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     func setupContraints(){
         
         NSLayoutConstraint.activate([
-
 
             divider.heightAnchor.constraint(equalToConstant: 157.5),
             divider.widthAnchor.constraint(equalToConstant: 2),
@@ -116,9 +117,8 @@ class UserTableViewCell: UITableViewCell, ViewCode {
        contentView.addSubview(nameLabel)
        contentView.addSubview(VStackInitialsName)
         
-        VStackInitialsName.addArrangedSubview(initialsLabel)
-        VStackInitialsName.addArrangedSubview(nameLabel)
-        
+       VStackInitialsName.addArrangedSubview(initialsLabel)
+       VStackInitialsName.addArrangedSubview(nameLabel)
         
        contentView.addSubview(usernameLabel)
        contentView.addSubview(emailLabel)
@@ -152,16 +152,8 @@ class UserTableViewCell: UITableViewCell, ViewCode {
     }
     
   
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
-    @IBAction func albumsAction(_ sender: UIButton) {
-        delegate?.didTapAlbums(with: id, by: nameLabel.text ?? "")
-    }
-    
-    @IBAction func postsAction(_ sender: UIButton) {
-        delegate?.didTapPosts(with: id, by: nameLabel.text ?? "")
-    }
+
 }

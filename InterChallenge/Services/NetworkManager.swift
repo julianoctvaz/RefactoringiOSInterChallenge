@@ -145,6 +145,7 @@ final class NetworkManager: NetworkCapable {
     }
     
     func getPhotosThumbnail(_ photo: Photo, _ cell: PhotoTableViewCell) -> Void {
+        
         AF.download(photo.thumbnailUrl).responseData { response in
             switch response.result {
             case .success(let data):
@@ -154,4 +155,6 @@ final class NetworkManager: NetworkCapable {
             }
         }
     }
+    
+    deinit{}
 }

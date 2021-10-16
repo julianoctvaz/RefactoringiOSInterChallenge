@@ -25,7 +25,6 @@ final class TitleAndDescriptionTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             
-            
             titleLabel.bottomAnchor.constraint(equalTo:  descriptionLabel.topAnchor, constant: -16),
             titleLabel.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor,  constant: 16),
             titleLabel.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
